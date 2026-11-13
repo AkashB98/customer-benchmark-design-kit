@@ -1,0 +1,1837 @@
+{
+ "contract": {
+  "audio": {
+   "language": "en",
+   "sample_rate_hz": 16000
+  },
+  "benchmark_id": "acme-stt-benchmark-v1",
+  "bootstrap_reps": 1000,
+  "bootstrap_seed": 1234,
+  "customer": "Acme Support Co (fictional)",
+  "min_slice_n_for_claim": 15,
+  "normalization": {
+   "lowercase": true,
+   "number_format": "words",
+   "strip_punctuation": true
+  },
+  "slices": [
+   {
+    "accent": "us_general",
+    "call_type": "inbound",
+    "domain": "support",
+    "min_samples": 20,
+    "slice_id": "us_general/support",
+    "speakers": [
+     "SPK-US-SUP-01",
+     "SPK-US-SUP-02",
+     "SPK-US-SUP-03",
+     "SPK-US-SUP-04",
+     "SPK-US-SUP-05"
+    ]
+   },
+   {
+    "accent": "us_general",
+    "call_type": "outbound",
+    "domain": "sales",
+    "min_samples": 20,
+    "slice_id": "us_general/sales",
+    "speakers": [
+     "SPK-US-SAL-01",
+     "SPK-US-SAL-02",
+     "SPK-US-SAL-03",
+     "SPK-US-SAL-04",
+     "SPK-US-SAL-05"
+    ]
+   },
+   {
+    "accent": "british",
+    "call_type": "inbound",
+    "domain": "support",
+    "min_samples": 20,
+    "slice_id": "british/support",
+    "speakers": [
+     "SPK-GB-SUP-01",
+     "SPK-GB-SUP-02",
+     "SPK-GB-SUP-03",
+     "SPK-GB-SUP-04",
+     "SPK-GB-SUP-05"
+    ]
+   },
+   {
+    "accent": "british",
+    "call_type": "outbound",
+    "domain": "sales",
+    "min_samples": 20,
+    "slice_id": "british/sales",
+    "speakers": [
+     "SPK-GB-SAL-01",
+     "SPK-GB-SAL-02",
+     "SPK-GB-SAL-03",
+     "SPK-GB-SAL-04",
+     "SPK-GB-SAL-05"
+    ]
+   },
+   {
+    "accent": "indian",
+    "call_type": "inbound",
+    "domain": "support",
+    "min_samples": 20,
+    "slice_id": "indian/support",
+    "speakers": [
+     "SPK-IN-SUP-01",
+     "SPK-IN-SUP-02",
+     "SPK-IN-SUP-03",
+     "SPK-IN-SUP-04",
+     "SPK-IN-SUP-05"
+    ]
+   },
+   {
+    "accent": "indian",
+    "call_type": "outbound",
+    "domain": "sales",
+    "min_samples": 20,
+    "slice_id": "indian/sales",
+    "speakers": [
+     "SPK-IN-SAL-01",
+     "SPK-IN-SAL-02",
+     "SPK-IN-SAL-03",
+     "SPK-IN-SAL-04",
+     "SPK-IN-SAL-05"
+    ]
+   }
+  ],
+  "tuning_speakers": [
+   "SPK-TUNE-01",
+   "SPK-TUNE-02",
+   "SPK-TUNE-03",
+   "SPK-TUNE-04",
+   "SPK-TUNE-05",
+   "SPK-TUNE-06",
+   "SPK-TUNE-07",
+   "SPK-TUNE-08"
+  ],
+  "vendors": [
+   "VendorAlpha",
+   "VendorBeta"
+  ]
+ },
+ "hypotheses": {
+  "VendorAlpha": [
+   {
+    "text": "order number is twelve and the delivery never arrived",
+    "utterance_id": "UTT-US_GENERAL-SUPPORT-001"
+   },
+   {
+    "text": "i need help resetting password for account twenty four",
+    "utterance_id": "UTT-US_GENERAL-SUPPORT-002"
+   },
+   {
+    "text": "the invoice for forty two dollars was charged twice this month",
+    "utterance_id": "UTT-US_GENERAL-SUPPORT-003"
+   },
+   {
+    "text": "please cancel ticket number sixty seven and charge the fee",
+    "utterance_id": "UTT-US_GENERAL-SUPPORT-004"
+   },
+   {
+    "text": "our office line has been down for eighty nine hours today",
+    "utterance_id": "UTT-US_GENERAL-SUPPORT-005"
+   },
+   {
+    "text": "my order number is one hundred and the um never arrived",
+    "utterance_id": "UTT-US_GENERAL-SUPPORT-006"
+   },
+   {
+    "text": "i need help resetting thanks the password um account thirty five",
+    "utterance_id": "UTT-US_GENERAL-SUPPORT-007"
+   },
+   {
+    "text": "the invoice for fifty eight dollars was charged twice this month",
+    "utterance_id": "UTT-US_GENERAL-SUPPORT-008"
+   },
+   {
+    "text": "please cancel ticket number twelve and refund the fee",
+    "utterance_id": "UTT-US_GENERAL-SUPPORT-009"
+   },
+   {
+    "text": "our office line has been down for twenty four hours today",
+    "utterance_id": "UTT-US_GENERAL-SUPPORT-010"
+   },
+   {
+    "text": "my order number is forty two and the delivery never arrived",
+    "utterance_id": "UTT-US_GENERAL-SUPPORT-011"
+   },
+   {
+    "text": "i need help resetting the password for account sixty seven",
+    "utterance_id": "UTT-US_GENERAL-SUPPORT-012"
+   },
+   {
+    "text": "the invoice for eighty nine dollars was charged twice this month",
+    "utterance_id": "UTT-US_GENERAL-SUPPORT-013"
+   },
+   {
+    "text": "please cancel ticket number one hundred and refund the fee",
+    "utterance_id": "UTT-US_GENERAL-SUPPORT-014"
+   },
+   {
+    "text": "our office line um been um for thirty five hours today",
+    "utterance_id": "UTT-US_GENERAL-SUPPORT-015"
+   },
+   {
+    "text": "my order actually number is fifty eight and the delivery um arrived",
+    "utterance_id": "UTT-US_GENERAL-SUPPORT-016"
+   },
+   {
+    "text": "i need help changing um password for account twelve",
+    "utterance_id": "UTT-US_GENERAL-SUPPORT-017"
+   },
+   {
+    "text": "the invoice for twenty four dollars was charged twice this month",
+    "utterance_id": "UTT-US_GENERAL-SUPPORT-018"
+   },
+   {
+    "text": "please cancel ticket number forty two and refund actually the fee",
+    "utterance_id": "UTT-US_GENERAL-SUPPORT-019"
+   },
+   {
+    "text": "our office line has been again down for sixty seven hours today",
+    "utterance_id": "UTT-US_GENERAL-SUPPORT-020"
+   },
+   {
+    "text": "i am calling about the renewal quote for twelve seats",
+    "utterance_id": "UTT-US_GENERAL-SALES-001"
+   },
+   {
+    "text": "can you send pricing for twenty four licences before friday",
+    "utterance_id": "UTT-US_GENERAL-SALES-002"
+   },
+   {
+    "text": "we want to upgrade the plan that costs forty two dollars a um",
+    "utterance_id": "UTT-US_GENERAL-SALES-003"
+   },
+   {
+    "text": "the discount code saved us sixty seven dollars on the order",
+    "utterance_id": "UTT-US_GENERAL-SALES-004"
+   },
+   {
+    "text": "please book a demo for a team of eighty nine people next week",
+    "utterance_id": "UTT-US_GENERAL-SALES-005"
+   },
+   {
+    "text": "i am calling actually about the renewal quote um one hundred seats",
+    "utterance_id": "UTT-US_GENERAL-SALES-006"
+   },
+   {
+    "text": "can you send pricing for thirty five licences before friday",
+    "utterance_id": "UTT-US_GENERAL-SALES-007"
+   },
+   {
+    "text": "we want to upgrade the plan that costs fifty eight dollars a um",
+    "utterance_id": "UTT-US_GENERAL-SALES-008"
+   },
+   {
+    "text": "the discount actually code saved us twelve dollars um the order",
+    "utterance_id": "UTT-US_GENERAL-SALES-009"
+   },
+   {
+    "text": "please book a demo for a team of twenty four people next week",
+    "utterance_id": "UTT-US_GENERAL-SALES-010"
+   },
+   {
+    "text": "i am calling about the um for forty two seats",
+    "utterance_id": "UTT-US_GENERAL-SALES-011"
+   },
+   {
+    "text": "can you send pricing for seven licences before friday",
+    "utterance_id": "UTT-US_GENERAL-SALES-012"
+   },
+   {
+    "text": "we want to upgrade the plan that costs eighty thanks nine dollars a month",
+    "utterance_id": "UTT-US_GENERAL-SALES-013"
+   },
+   {
+    "text": "the discount code saved us one hundred dollars on the order",
+    "utterance_id": "UTT-US_GENERAL-SALES-014"
+   },
+   {
+    "text": "please book a demo for a team of thirty five people again next week",
+    "utterance_id": "UTT-US_GENERAL-SALES-015"
+   },
+   {
+    "text": "i am calling again about the renewal quote for eight seats",
+    "utterance_id": "UTT-US_GENERAL-SALES-016"
+   },
+   {
+    "text": "can you send pricing for twelve licences before friday",
+    "utterance_id": "UTT-US_GENERAL-SALES-017"
+   },
+   {
+    "text": "we want to the plan that costs twenty four dollars a",
+    "utterance_id": "UTT-US_GENERAL-SALES-018"
+   },
+   {
+    "text": "the discount code saved us forty um dollars on the today order",
+    "utterance_id": "UTT-US_GENERAL-SALES-019"
+   },
+   {
+    "text": "please book a demo for a team of sixty seven people next week",
+    "utterance_id": "UTT-US_GENERAL-SALES-020"
+   },
+   {
+    "text": "my order number is twelve and the delivery never arrived actually",
+    "utterance_id": "UTT-BRITISH-SUPPORT-001"
+   },
+   {
+    "text": "i need help resetting the password for twenty um",
+    "utterance_id": "UTT-BRITISH-SUPPORT-002"
+   },
+   {
+    "text": "um invoice for forty two dollars was charged twice this month",
+    "utterance_id": "UTT-BRITISH-SUPPORT-003"
+   },
+   {
+    "text": "please cancel ticket please number sixty today seven and refund the fee",
+    "utterance_id": "UTT-BRITISH-SUPPORT-004"
+   },
+   {
+    "text": "our office line has been down for eighty um hours today",
+    "utterance_id": "UTT-BRITISH-SUPPORT-005"
+   },
+   {
+    "text": "my number is one hundred and the delivery never arrived",
+    "utterance_id": "UTT-BRITISH-SUPPORT-006"
+   },
+   {
+    "text": "i need help resetting the password um account thirty five",
+    "utterance_id": "UTT-BRITISH-SUPPORT-007"
+   },
+   {
+    "text": "invoice for fifty eight dollars was charged twice this month",
+    "utterance_id": "UTT-BRITISH-SUPPORT-008"
+   },
+   {
+    "text": "please pause ticket number twelve and refund the fee",
+    "utterance_id": "UTT-BRITISH-SUPPORT-009"
+   },
+   {
+    "text": "our office line has been down for twenty four hours today",
+    "utterance_id": "UTT-BRITISH-SUPPORT-010"
+   },
+   {
+    "text": "my order number is forty two and the um never arrived",
+    "utterance_id": "UTT-BRITISH-SUPPORT-011"
+   },
+   {
+    "text": "i need help resetting the password for um sixty seven",
+    "utterance_id": "UTT-BRITISH-SUPPORT-012"
+   },
+   {
+    "text": "the invoice for eighty nine dollars was charged twice this um",
+    "utterance_id": "UTT-BRITISH-SUPPORT-013"
+   },
+   {
+    "text": "please cancel ticket number one hundred and refund the fee",
+    "utterance_id": "UTT-BRITISH-SUPPORT-014"
+   },
+   {
+    "text": "our office line has been down for thirty five thanks hours today",
+    "utterance_id": "UTT-BRITISH-SUPPORT-015"
+   },
+   {
+    "text": "my order number is eight and the delivery never arrived",
+    "utterance_id": "UTT-BRITISH-SUPPORT-016"
+   },
+   {
+    "text": "i need help resetting the password for thanks account twelve",
+    "utterance_id": "UTT-BRITISH-SUPPORT-017"
+   },
+   {
+    "text": "the invoice for um four dollars was charged twice this month",
+    "utterance_id": "UTT-BRITISH-SUPPORT-018"
+   },
+   {
+    "text": "please cancel ticket number forty two and refund the fee",
+    "utterance_id": "UTT-BRITISH-SUPPORT-019"
+   },
+   {
+    "text": "office line has been down for sixty seven hours um",
+    "utterance_id": "UTT-BRITISH-SUPPORT-020"
+   },
+   {
+    "text": "i am calling about the renewal quote for seats",
+    "utterance_id": "UTT-BRITISH-SALES-001"
+   },
+   {
+    "text": "can you send pricing for twenty um um before friday actually",
+    "utterance_id": "UTT-BRITISH-SALES-002"
+   },
+   {
+    "text": "we want to upgrade the plan that costs um two dollars a month",
+    "utterance_id": "UTT-BRITISH-SALES-003"
+   },
+   {
+    "text": "the discount code saved us seven dollars on the order",
+    "utterance_id": "UTT-BRITISH-SALES-004"
+   },
+   {
+    "text": "please book a demo for um team of nine people next week",
+    "utterance_id": "UTT-BRITISH-SALES-005"
+   },
+   {
+    "text": "i am calling about um renewal quote for one hundred seats",
+    "utterance_id": "UTT-BRITISH-SALES-006"
+   },
+   {
+    "text": "can you send pricing for thirty five licences before friday",
+    "utterance_id": "UTT-BRITISH-SALES-007"
+   },
+   {
+    "text": "we want to upgrade the plan that costs um eight dollars a month today",
+    "utterance_id": "UTT-BRITISH-SALES-008"
+   },
+   {
+    "text": "the discount code saved us twelve dollars on the order",
+    "utterance_id": "UTT-BRITISH-SALES-009"
+   },
+   {
+    "text": "please book a demo today a actually team of twenty four people next week",
+    "utterance_id": "UTT-BRITISH-SALES-010"
+   },
+   {
+    "text": "i am calling about the renewal quote for forty two seats",
+    "utterance_id": "UTT-BRITISH-SALES-011"
+   },
+   {
+    "text": "can you mail pricing for um seven licences before friday",
+    "utterance_id": "UTT-BRITISH-SALES-012"
+   },
+   {
+    "text": "we want to upgrade the plan um costs eighty nine dollars a month",
+    "utterance_id": "UTT-BRITISH-SALES-013"
+   },
+   {
+    "text": "the discount code saved us one hundred dollars on the um",
+    "utterance_id": "UTT-BRITISH-SALES-014"
+   },
+   {
+    "text": "please book a demo for a team actually of thirty five people next week",
+    "utterance_id": "UTT-BRITISH-SALES-015"
+   },
+   {
+    "text": "i am calling about the renewal quote for fifty eight seats",
+    "utterance_id": "UTT-BRITISH-SALES-016"
+   },
+   {
+    "text": "um um send pricing for twelve licences before um",
+    "utterance_id": "UTT-BRITISH-SALES-017"
+   },
+   {
+    "text": "we want to upgrade the plan that costs twenty four dollars a month",
+    "utterance_id": "UTT-BRITISH-SALES-018"
+   },
+   {
+    "text": "um discount code saved us forty two dollars on the order",
+    "utterance_id": "UTT-BRITISH-SALES-019"
+   },
+   {
+    "text": "please book a demo for a team of sixty seven people next week",
+    "utterance_id": "UTT-BRITISH-SALES-020"
+   },
+   {
+    "text": "my order number is twelve and the delivery never arrived",
+    "utterance_id": "UTT-INDIAN-SUPPORT-001"
+   },
+   {
+    "text": "i need help resetting the password for account twenty four",
+    "utterance_id": "UTT-INDIAN-SUPPORT-002"
+   },
+   {
+    "text": "the invoice for forty two dollars was charged twice this month",
+    "utterance_id": "UTT-INDIAN-SUPPORT-003"
+   },
+   {
+    "text": "cancel ticket number sixty seven and refund the fee",
+    "utterance_id": "UTT-INDIAN-SUPPORT-004"
+   },
+   {
+    "text": "our office line has um down for eighty nine hours today",
+    "utterance_id": "UTT-INDIAN-SUPPORT-005"
+   },
+   {
+    "text": "my order number is one please and the delivery never arrived",
+    "utterance_id": "UTT-INDIAN-SUPPORT-006"
+   },
+   {
+    "text": "i need help resetting the password today for account thirty five",
+    "utterance_id": "UTT-INDIAN-SUPPORT-007"
+   },
+   {
+    "text": "the invoice for fifty um dollars was charged twice this month",
+    "utterance_id": "UTT-INDIAN-SUPPORT-008"
+   },
+   {
+    "text": "please cancel ticket number twelve and refund the fee",
+    "utterance_id": "UTT-INDIAN-SUPPORT-009"
+   },
+   {
+    "text": "our office line has been down for twenty four hours today",
+    "utterance_id": "UTT-INDIAN-SUPPORT-010"
+   },
+   {
+    "text": "my order number is forty two and the delivery never arrived",
+    "utterance_id": "UTT-INDIAN-SUPPORT-011"
+   },
+   {
+    "text": "i need thanks help resetting the for account sixty seven",
+    "utterance_id": "UTT-INDIAN-SUPPORT-012"
+   },
+   {
+    "text": "the invoice for eighty nine dollars was charged twice this month",
+    "utterance_id": "UTT-INDIAN-SUPPORT-013"
+   },
+   {
+    "text": "cancel ticket number one hundred and refund the fee",
+    "utterance_id": "UTT-INDIAN-SUPPORT-014"
+   },
+   {
+    "text": "our office line has been down um thirty five hours today",
+    "utterance_id": "UTT-INDIAN-SUPPORT-015"
+   },
+   {
+    "text": "my order number is fifty um and the delivery never shipped",
+    "utterance_id": "UTT-INDIAN-SUPPORT-016"
+   },
+   {
+    "text": "i need help the password for account twelve",
+    "utterance_id": "UTT-INDIAN-SUPPORT-017"
+   },
+   {
+    "text": "the invoice for twenty four dollars was charged this month",
+    "utterance_id": "UTT-INDIAN-SUPPORT-018"
+   },
+   {
+    "text": "please cancel ticket number forty um and refund the fee",
+    "utterance_id": "UTT-INDIAN-SUPPORT-019"
+   },
+   {
+    "text": "office line has been down for sixty seven hours today",
+    "utterance_id": "UTT-INDIAN-SUPPORT-020"
+   },
+   {
+    "text": "i am calling about the renewal quote for twelve seats",
+    "utterance_id": "UTT-INDIAN-SALES-001"
+   },
+   {
+    "text": "can you send pricing for twenty four licences um friday",
+    "utterance_id": "UTT-INDIAN-SALES-002"
+   },
+   {
+    "text": "we today want to change the that costs um two dollars a month",
+    "utterance_id": "UTT-INDIAN-SALES-003"
+   },
+   {
+    "text": "the discount code um seven dollars on the",
+    "utterance_id": "UTT-INDIAN-SALES-004"
+   },
+   {
+    "text": "um book a um for a team of eighty nine people next week",
+    "utterance_id": "UTT-INDIAN-SALES-005"
+   },
+   {
+    "text": "i am calling about the renewal quote for one hundred seats",
+    "utterance_id": "UTT-INDIAN-SALES-006"
+   },
+   {
+    "text": "can um send pricing thirty five please licences before friday",
+    "utterance_id": "UTT-INDIAN-SALES-007"
+   },
+   {
+    "text": "we want to upgrade the plan that costs fifty eight dollars a month",
+    "utterance_id": "UTT-INDIAN-SALES-008"
+   },
+   {
+    "text": "the discount code saved us twelve dollars on the order",
+    "utterance_id": "UTT-INDIAN-SALES-009"
+   },
+   {
+    "text": "please book a demo for team of twenty four people next week",
+    "utterance_id": "UTT-INDIAN-SALES-010"
+   },
+   {
+    "text": "i am calling about the renewal quote for forty two seats",
+    "utterance_id": "UTT-INDIAN-SALES-011"
+   },
+   {
+    "text": "can you send pricing um sixty seven licences um friday",
+    "utterance_id": "UTT-INDIAN-SALES-012"
+   },
+   {
+    "text": "want to upgrade the plan that costs nine dollars a month",
+    "utterance_id": "UTT-INDIAN-SALES-013"
+   },
+   {
+    "text": "the discount code saved us one hundred dollars on the order",
+    "utterance_id": "UTT-INDIAN-SALES-014"
+   },
+   {
+    "text": "please book a demo for a team of thirty um people um week",
+    "utterance_id": "UTT-INDIAN-SALES-015"
+   },
+   {
+    "text": "i am calling about the renewal quote today for fifty eight um",
+    "utterance_id": "UTT-INDIAN-SALES-016"
+   },
+   {
+    "text": "can you send pricing for twelve licences before friday",
+    "utterance_id": "UTT-INDIAN-SALES-017"
+   },
+   {
+    "text": "we want to upgrade the plan that costs twenty four a month thanks",
+    "utterance_id": "UTT-INDIAN-SALES-018"
+   },
+   {
+    "text": "the discount code saved us forty two dollars on the order",
+    "utterance_id": "UTT-INDIAN-SALES-019"
+   },
+   {
+    "text": "please book a demo for a team of sixty seven people next week",
+    "utterance_id": "UTT-INDIAN-SALES-020"
+   }
+  ],
+  "VendorBeta": [
+   {
+    "text": "my order number please is twelve and the delivery never arrived",
+    "utterance_id": "UTT-US_GENERAL-SUPPORT-001"
+   },
+   {
+    "text": "i need help resetting the password for account twenty four",
+    "utterance_id": "UTT-US_GENERAL-SUPPORT-002"
+   },
+   {
+    "text": "the invoice for forty two dollars was billed twice this month",
+    "utterance_id": "UTT-US_GENERAL-SUPPORT-003"
+   },
+   {
+    "text": "please cancel ticket number sixty seven and actually refund fee",
+    "utterance_id": "UTT-US_GENERAL-SUPPORT-004"
+   },
+   {
+    "text": "our office um has been down for um nine hours today",
+    "utterance_id": "UTT-US_GENERAL-SUPPORT-005"
+   },
+   {
+    "text": "my order number is one hundred and thanks the delivery never arrived",
+    "utterance_id": "UTT-US_GENERAL-SUPPORT-006"
+   },
+   {
+    "text": "i need help the password for account thirty five",
+    "utterance_id": "UTT-US_GENERAL-SUPPORT-007"
+   },
+   {
+    "text": "um invoice for fifty please dollars was charged twice um month",
+    "utterance_id": "UTT-US_GENERAL-SUPPORT-008"
+   },
+   {
+    "text": "please cancel thanks ticket please number twelve and refund the fee",
+    "utterance_id": "UTT-US_GENERAL-SUPPORT-009"
+   },
+   {
+    "text": "our office line has been down for twenty four hours today",
+    "utterance_id": "UTT-US_GENERAL-SUPPORT-010"
+   },
+   {
+    "text": "my order number forty um and the delivery never arrived",
+    "utterance_id": "UTT-US_GENERAL-SUPPORT-011"
+   },
+   {
+    "text": "i need assist resetting the password for um sixty please seven",
+    "utterance_id": "UTT-US_GENERAL-SUPPORT-012"
+   },
+   {
+    "text": "um invoice for eighty nine dollars please was charged twice this month",
+    "utterance_id": "UTT-US_GENERAL-SUPPORT-013"
+   },
+   {
+    "text": "um cancel ticket number one hundred refund the fee",
+    "utterance_id": "UTT-US_GENERAL-SUPPORT-014"
+   },
+   {
+    "text": "our office line has been down for thirty five hours today",
+    "utterance_id": "UTT-US_GENERAL-SUPPORT-015"
+   },
+   {
+    "text": "my order number is um and the delivery um arrived",
+    "utterance_id": "UTT-US_GENERAL-SUPPORT-016"
+   },
+   {
+    "text": "i need help resetting the password for account um",
+    "utterance_id": "UTT-US_GENERAL-SUPPORT-017"
+   },
+   {
+    "text": "the invoice for twenty four dollars was charged twice actually this today month",
+    "utterance_id": "UTT-US_GENERAL-SUPPORT-018"
+   },
+   {
+    "text": "um ticket number um two and refund um fee",
+    "utterance_id": "UTT-US_GENERAL-SUPPORT-019"
+   },
+   {
+    "text": "our office line has been down for sixty seven again hours today",
+    "utterance_id": "UTT-US_GENERAL-SUPPORT-020"
+   },
+   {
+    "text": "i am calling about the renewal um for twelve um",
+    "utterance_id": "UTT-US_GENERAL-SALES-001"
+   },
+   {
+    "text": "can you please send pricing for twenty four licences before friday",
+    "utterance_id": "UTT-US_GENERAL-SALES-002"
+   },
+   {
+    "text": "we want today to upgrade the please plan um costs forty um dollars a month",
+    "utterance_id": "UTT-US_GENERAL-SALES-003"
+   },
+   {
+    "text": "um discount code saved us sixty seven dollars on the order",
+    "utterance_id": "UTT-US_GENERAL-SALES-004"
+   },
+   {
+    "text": "please book a demo for a team of eighty nine people next week",
+    "utterance_id": "UTT-US_GENERAL-SALES-005"
+   },
+   {
+    "text": "i am um about the renewal um for one hundred seats",
+    "utterance_id": "UTT-US_GENERAL-SALES-006"
+   },
+   {
+    "text": "can um send pricing for thirty five licences before friday",
+    "utterance_id": "UTT-US_GENERAL-SALES-007"
+   },
+   {
+    "text": "we want to upgrade the plan that costs actually fifty um dollars a month",
+    "utterance_id": "UTT-US_GENERAL-SALES-008"
+   },
+   {
+    "text": "the discount code saved us twelve on the",
+    "utterance_id": "UTT-US_GENERAL-SALES-009"
+   },
+   {
+    "text": "please book a demo for um team of twenty four people next week",
+    "utterance_id": "UTT-US_GENERAL-SALES-010"
+   },
+   {
+    "text": "i am calling about renewal quote for thanks forty seats",
+    "utterance_id": "UTT-US_GENERAL-SALES-011"
+   },
+   {
+    "text": "can you send um for sixty seven licences before um",
+    "utterance_id": "UTT-US_GENERAL-SALES-012"
+   },
+   {
+    "text": "we want to upgrade please the plan that costs eighty nine a month",
+    "utterance_id": "UTT-US_GENERAL-SALES-013"
+   },
+   {
+    "text": "the discount um saved us one hundred dollars on the order please",
+    "utterance_id": "UTT-US_GENERAL-SALES-014"
+   },
+   {
+    "text": "please book again a um for team of five um next today",
+    "utterance_id": "UTT-US_GENERAL-SALES-015"
+   },
+   {
+    "text": "i am calling about the renewal quote for fifty eight seats",
+    "utterance_id": "UTT-US_GENERAL-SALES-016"
+   },
+   {
+    "text": "can you send pricing um twelve licences before friday",
+    "utterance_id": "UTT-US_GENERAL-SALES-017"
+   },
+   {
+    "text": "we want um upgrade the um um costs twenty dollars today a month",
+    "utterance_id": "UTT-US_GENERAL-SALES-018"
+   },
+   {
+    "text": "the discount saved us forty two on the order",
+    "utterance_id": "UTT-US_GENERAL-SALES-019"
+   },
+   {
+    "text": "please book a for a team sixty seven people next week",
+    "utterance_id": "UTT-US_GENERAL-SALES-020"
+   },
+   {
+    "text": "my order number is twelve and the delivery never arrived",
+    "utterance_id": "UTT-BRITISH-SUPPORT-001"
+   },
+   {
+    "text": "i need help resetting the um um twenty four",
+    "utterance_id": "UTT-BRITISH-SUPPORT-002"
+   },
+   {
+    "text": "the invoice for forty two dollars again was charged twice this month",
+    "utterance_id": "UTT-BRITISH-SUPPORT-003"
+   },
+   {
+    "text": "please cancel ticket number sixty seven and refund the fee",
+    "utterance_id": "UTT-BRITISH-SUPPORT-004"
+   },
+   {
+    "text": "office line has been down for eighty nine hours today",
+    "utterance_id": "UTT-BRITISH-SUPPORT-005"
+   },
+   {
+    "text": "my order number one hundred and the delivery never arrived",
+    "utterance_id": "UTT-BRITISH-SUPPORT-006"
+   },
+   {
+    "text": "i need help resetting the um for account um five",
+    "utterance_id": "UTT-BRITISH-SUPPORT-007"
+   },
+   {
+    "text": "the invoice um fifty dollars was charged actually twice this um",
+    "utterance_id": "UTT-BRITISH-SUPPORT-008"
+   },
+   {
+    "text": "please ticket number twelve and refund the fee",
+    "utterance_id": "UTT-BRITISH-SUPPORT-009"
+   },
+   {
+    "text": "our office line has been down for twenty four hours today",
+    "utterance_id": "UTT-BRITISH-SUPPORT-010"
+   },
+   {
+    "text": "my order number is forty two and the delivery never arrived",
+    "utterance_id": "UTT-BRITISH-SUPPORT-011"
+   },
+   {
+    "text": "i need please help resetting the password account sixty seven",
+    "utterance_id": "UTT-BRITISH-SUPPORT-012"
+   },
+   {
+    "text": "the invoice for eighty nine dollars was charged twice um month",
+    "utterance_id": "UTT-BRITISH-SUPPORT-013"
+   },
+   {
+    "text": "please cancel ticket number um hundred and refund the fee",
+    "utterance_id": "UTT-BRITISH-SUPPORT-014"
+   },
+   {
+    "text": "um office line has been um for thirty five hours today",
+    "utterance_id": "UTT-BRITISH-SUPPORT-015"
+   },
+   {
+    "text": "my thanks order number is fifty eight and delivery never arrived",
+    "utterance_id": "UTT-BRITISH-SUPPORT-016"
+   },
+   {
+    "text": "i today need help resetting the password um account twelve",
+    "utterance_id": "UTT-BRITISH-SUPPORT-017"
+   },
+   {
+    "text": "the invoice twenty um dollars charged twice this month",
+    "utterance_id": "UTT-BRITISH-SUPPORT-018"
+   },
+   {
+    "text": "please cancel ticket number forty um and refund please the please fee",
+    "utterance_id": "UTT-BRITISH-SUPPORT-019"
+   },
+   {
+    "text": "our office line has been down for sixty seven hours today",
+    "utterance_id": "UTT-BRITISH-SUPPORT-020"
+   },
+   {
+    "text": "i am calling about the um quote for twelve seats",
+    "utterance_id": "UTT-BRITISH-SALES-001"
+   },
+   {
+    "text": "can you send pricing for um four licences before um",
+    "utterance_id": "UTT-BRITISH-SALES-002"
+   },
+   {
+    "text": "we want to upgrade the plan that um um two dollars a month",
+    "utterance_id": "UTT-BRITISH-SALES-003"
+   },
+   {
+    "text": "the um code saved us sixty seven dollars on the um",
+    "utterance_id": "UTT-BRITISH-SALES-004"
+   },
+   {
+    "text": "please book a um for a team of eighty nine people next week",
+    "utterance_id": "UTT-BRITISH-SALES-005"
+   },
+   {
+    "text": "i am calling about the renewal quote for one hundred seats",
+    "utterance_id": "UTT-BRITISH-SALES-006"
+   },
+   {
+    "text": "can you mail pricing for thirty five licences before friday",
+    "utterance_id": "UTT-BRITISH-SALES-007"
+   },
+   {
+    "text": "we want to upgrade the today plan actually that costs fifty eight dollars a month",
+    "utterance_id": "UTT-BRITISH-SALES-008"
+   },
+   {
+    "text": "the discount code saved us twelve dollars on the order",
+    "utterance_id": "UTT-BRITISH-SALES-009"
+   },
+   {
+    "text": "please hold demo for a um um twenty four people next week",
+    "utterance_id": "UTT-BRITISH-SALES-010"
+   },
+   {
+    "text": "i am calling about the renewal quote for forty actually two seats",
+    "utterance_id": "UTT-BRITISH-SALES-011"
+   },
+   {
+    "text": "um you send um for sixty seven licences before friday",
+    "utterance_id": "UTT-BRITISH-SALES-012"
+   },
+   {
+    "text": "um want to upgrade the plan that costs um nine um a month",
+    "utterance_id": "UTT-BRITISH-SALES-013"
+   },
+   {
+    "text": "the discount code us one hundred dollars on the order",
+    "utterance_id": "UTT-BRITISH-SALES-014"
+   },
+   {
+    "text": "please book a demo for um team of thirty five people next week",
+    "utterance_id": "UTT-BRITISH-SALES-015"
+   },
+   {
+    "text": "i am calling about the renewal quote for fifty eight seats",
+    "utterance_id": "UTT-BRITISH-SALES-016"
+   },
+   {
+    "text": "can you send pricing for twelve licences before friday",
+    "utterance_id": "UTT-BRITISH-SALES-017"
+   },
+   {
+    "text": "we want to upgrade um plan that costs twenty four dollars a month",
+    "utterance_id": "UTT-BRITISH-SALES-018"
+   },
+   {
+    "text": "the um code saved us forty two on the order",
+    "utterance_id": "UTT-BRITISH-SALES-019"
+   },
+   {
+    "text": "please book please a demo for a team um sixty um people next week",
+    "utterance_id": "UTT-BRITISH-SALES-020"
+   },
+   {
+    "text": "my order number twelve and the delivery never shipped",
+    "utterance_id": "UTT-INDIAN-SUPPORT-001"
+   },
+   {
+    "text": "i need the password for account twenty thanks four",
+    "utterance_id": "UTT-INDIAN-SUPPORT-002"
+   },
+   {
+    "text": "the invoice for um two dollars um charged twice this month",
+    "utterance_id": "UTT-INDIAN-SUPPORT-003"
+   },
+   {
+    "text": "please pause ticket number sixty seven and refund the fee",
+    "utterance_id": "UTT-INDIAN-SUPPORT-004"
+   },
+   {
+    "text": "our thanks office line has been down for eighty nine hours um",
+    "utterance_id": "UTT-INDIAN-SUPPORT-005"
+   },
+   {
+    "text": "my um number is one hundred and the today delivery never arrived",
+    "utterance_id": "UTT-INDIAN-SUPPORT-006"
+   },
+   {
+    "text": "i need help resetting the password for account thirty five",
+    "utterance_id": "UTT-INDIAN-SUPPORT-007"
+   },
+   {
+    "text": "the invoice for fifty eight dollars was twice this month",
+    "utterance_id": "UTT-INDIAN-SUPPORT-008"
+   },
+   {
+    "text": "cancel ticket twelve and refund today the fee",
+    "utterance_id": "UTT-INDIAN-SUPPORT-009"
+   },
+   {
+    "text": "our office line has been down hours today",
+    "utterance_id": "UTT-INDIAN-SUPPORT-010"
+   },
+   {
+    "text": "my order number is forty two um the delivery never arrived",
+    "utterance_id": "UTT-INDIAN-SUPPORT-011"
+   },
+   {
+    "text": "i need help resetting the password for um sixty seven",
+    "utterance_id": "UTT-INDIAN-SUPPORT-012"
+   },
+   {
+    "text": "the invoice for eighty nine um was charged this month",
+    "utterance_id": "UTT-INDIAN-SUPPORT-013"
+   },
+   {
+    "text": "please ticket um one hundred and refund the fee",
+    "utterance_id": "UTT-INDIAN-SUPPORT-014"
+   },
+   {
+    "text": "our office line has been down for um um hours today",
+    "utterance_id": "UTT-INDIAN-SUPPORT-015"
+   },
+   {
+    "text": "my um number is fifty eight and the delivery never arrived",
+    "utterance_id": "UTT-INDIAN-SUPPORT-016"
+   },
+   {
+    "text": "i need assist resetting um um for account um",
+    "utterance_id": "UTT-INDIAN-SUPPORT-017"
+   },
+   {
+    "text": "the invoice for twenty four dollars was billed twice this month",
+    "utterance_id": "UTT-INDIAN-SUPPORT-018"
+   },
+   {
+    "text": "please again cancel ticket number forty two refund today fee",
+    "utterance_id": "UTT-INDIAN-SUPPORT-019"
+   },
+   {
+    "text": "our office line has um um for sixty seven hours today",
+    "utterance_id": "UTT-INDIAN-SUPPORT-020"
+   },
+   {
+    "text": "i am calling about the um quote for twelve seats",
+    "utterance_id": "UTT-INDIAN-SALES-001"
+   },
+   {
+    "text": "you send pricing um um four licences before friday",
+    "utterance_id": "UTT-INDIAN-SALES-002"
+   },
+   {
+    "text": "we want to upgrade the plan that costs forty two dollars a month",
+    "utterance_id": "UTT-INDIAN-SALES-003"
+   },
+   {
+    "text": "the discount code saved us um seven um on order",
+    "utterance_id": "UTT-INDIAN-SALES-004"
+   },
+   {
+    "text": "please book a demo for um of eighty nine people um week today",
+    "utterance_id": "UTT-INDIAN-SALES-005"
+   },
+   {
+    "text": "am calling about the renewal quote for one hundred seats",
+    "utterance_id": "UTT-INDIAN-SALES-006"
+   },
+   {
+    "text": "can um send pricing for thirty five licences before um",
+    "utterance_id": "UTT-INDIAN-SALES-007"
+   },
+   {
+    "text": "um um upgrade the plan that costs fifty um dollars um month",
+    "utterance_id": "UTT-INDIAN-SALES-008"
+   },
+   {
+    "text": "the discount code saved us twelve um on the order",
+    "utterance_id": "UTT-INDIAN-SALES-009"
+   },
+   {
+    "text": "please book a um um a team of please twenty four people next um",
+    "utterance_id": "UTT-INDIAN-SALES-010"
+   },
+   {
+    "text": "i am calling about the renewal quote for thanks two seats",
+    "utterance_id": "UTT-INDIAN-SALES-011"
+   },
+   {
+    "text": "can um send pricing for sixty seven um um friday",
+    "utterance_id": "UTT-INDIAN-SALES-012"
+   },
+   {
+    "text": "we want to thanks change plan that costs eighty nine dollars a month",
+    "utterance_id": "UTT-INDIAN-SALES-013"
+   },
+   {
+    "text": "the um um saved us hundred dollars on the thanks order",
+    "utterance_id": "UTT-INDIAN-SALES-014"
+   },
+   {
+    "text": "please book thanks a for a team of thirty five people next week",
+    "utterance_id": "UTT-INDIAN-SALES-015"
+   },
+   {
+    "text": "i please am calling about the renewal quote for fifty eight um",
+    "utterance_id": "UTT-INDIAN-SALES-016"
+   },
+   {
+    "text": "um um pricing for um licences um um",
+    "utterance_id": "UTT-INDIAN-SALES-017"
+   },
+   {
+    "text": "we um um upgrade the plan um costs four a month",
+    "utterance_id": "UTT-INDIAN-SALES-018"
+   },
+   {
+    "text": "the discount code saved us forty two dollars on the order",
+    "utterance_id": "UTT-INDIAN-SALES-019"
+   },
+   {
+    "text": "please book a demo today for a team of sixty seven next week",
+    "utterance_id": "UTT-INDIAN-SALES-020"
+   }
+  ]
+ },
+ "manifest": {
+  "hypothesis_normalization": {
+   "VendorAlpha": {
+    "lowercase": true,
+    "number_format": "words",
+    "strip_punctuation": true
+   },
+   "VendorBeta": {
+    "lowercase": true,
+    "number_format": "words",
+    "strip_punctuation": true
+   }
+  },
+  "language": "en",
+  "sample_rate_hz": 16000,
+  "truth_normalization": {
+   "lowercase": true,
+   "number_format": "words",
+   "strip_punctuation": true
+  },
+  "tuning_speakers": [
+   "SPK-TUNE-01",
+   "SPK-TUNE-02",
+   "SPK-TUNE-03",
+   "SPK-TUNE-04",
+   "SPK-TUNE-05",
+   "SPK-TUNE-06",
+   "SPK-TUNE-07",
+   "SPK-TUNE-08"
+  ]
+ },
+ "truth": [
+  {
+   "reference": "My order number is twelve and the delivery never arrived.",
+   "slice_id": "us_general/support",
+   "speaker_id": "SPK-US-SUP-01",
+   "utterance_id": "UTT-US_GENERAL-SUPPORT-001"
+  },
+  {
+   "reference": "I need help resetting the password for account twenty four.",
+   "slice_id": "us_general/support",
+   "speaker_id": "SPK-US-SUP-02",
+   "utterance_id": "UTT-US_GENERAL-SUPPORT-002"
+  },
+  {
+   "reference": "The invoice for forty two dollars was charged twice this month.",
+   "slice_id": "us_general/support",
+   "speaker_id": "SPK-US-SUP-03",
+   "utterance_id": "UTT-US_GENERAL-SUPPORT-003"
+  },
+  {
+   "reference": "Please cancel ticket number sixty seven and refund the fee.",
+   "slice_id": "us_general/support",
+   "speaker_id": "SPK-US-SUP-04",
+   "utterance_id": "UTT-US_GENERAL-SUPPORT-004"
+  },
+  {
+   "reference": "Our office line has been down for eighty nine hours today.",
+   "slice_id": "us_general/support",
+   "speaker_id": "SPK-US-SUP-05",
+   "utterance_id": "UTT-US_GENERAL-SUPPORT-005"
+  },
+  {
+   "reference": "My order number is one hundred and the delivery never arrived.",
+   "slice_id": "us_general/support",
+   "speaker_id": "SPK-US-SUP-01",
+   "utterance_id": "UTT-US_GENERAL-SUPPORT-006"
+  },
+  {
+   "reference": "I need help resetting the password for account thirty five.",
+   "slice_id": "us_general/support",
+   "speaker_id": "SPK-US-SUP-02",
+   "utterance_id": "UTT-US_GENERAL-SUPPORT-007"
+  },
+  {
+   "reference": "The invoice for fifty eight dollars was charged twice this month.",
+   "slice_id": "us_general/support",
+   "speaker_id": "SPK-US-SUP-03",
+   "utterance_id": "UTT-US_GENERAL-SUPPORT-008"
+  },
+  {
+   "reference": "Please cancel ticket number twelve and refund the fee.",
+   "slice_id": "us_general/support",
+   "speaker_id": "SPK-US-SUP-04",
+   "utterance_id": "UTT-US_GENERAL-SUPPORT-009"
+  },
+  {
+   "reference": "Our office line has been down for twenty four hours today.",
+   "slice_id": "us_general/support",
+   "speaker_id": "SPK-US-SUP-05",
+   "utterance_id": "UTT-US_GENERAL-SUPPORT-010"
+  },
+  {
+   "reference": "My order number is forty two and the delivery never arrived.",
+   "slice_id": "us_general/support",
+   "speaker_id": "SPK-US-SUP-01",
+   "utterance_id": "UTT-US_GENERAL-SUPPORT-011"
+  },
+  {
+   "reference": "I need help resetting the password for account sixty seven.",
+   "slice_id": "us_general/support",
+   "speaker_id": "SPK-US-SUP-02",
+   "utterance_id": "UTT-US_GENERAL-SUPPORT-012"
+  },
+  {
+   "reference": "The invoice for eighty nine dollars was charged twice this month.",
+   "slice_id": "us_general/support",
+   "speaker_id": "SPK-US-SUP-03",
+   "utterance_id": "UTT-US_GENERAL-SUPPORT-013"
+  },
+  {
+   "reference": "Please cancel ticket number one hundred and refund the fee.",
+   "slice_id": "us_general/support",
+   "speaker_id": "SPK-US-SUP-04",
+   "utterance_id": "UTT-US_GENERAL-SUPPORT-014"
+  },
+  {
+   "reference": "Our office line has been down for thirty five hours today.",
+   "slice_id": "us_general/support",
+   "speaker_id": "SPK-US-SUP-05",
+   "utterance_id": "UTT-US_GENERAL-SUPPORT-015"
+  },
+  {
+   "reference": "My order number is fifty eight and the delivery never arrived.",
+   "slice_id": "us_general/support",
+   "speaker_id": "SPK-US-SUP-01",
+   "utterance_id": "UTT-US_GENERAL-SUPPORT-016"
+  },
+  {
+   "reference": "I need help resetting the password for account twelve.",
+   "slice_id": "us_general/support",
+   "speaker_id": "SPK-US-SUP-02",
+   "utterance_id": "UTT-US_GENERAL-SUPPORT-017"
+  },
+  {
+   "reference": "The invoice for twenty four dollars was charged twice this month.",
+   "slice_id": "us_general/support",
+   "speaker_id": "SPK-US-SUP-03",
+   "utterance_id": "UTT-US_GENERAL-SUPPORT-018"
+  },
+  {
+   "reference": "Please cancel ticket number forty two and refund the fee.",
+   "slice_id": "us_general/support",
+   "speaker_id": "SPK-US-SUP-04",
+   "utterance_id": "UTT-US_GENERAL-SUPPORT-019"
+  },
+  {
+   "reference": "Our office line has been down for sixty seven hours today.",
+   "slice_id": "us_general/support",
+   "speaker_id": "SPK-US-SUP-05",
+   "utterance_id": "UTT-US_GENERAL-SUPPORT-020"
+  },
+  {
+   "reference": "I am calling about the renewal quote for twelve seats.",
+   "slice_id": "us_general/sales",
+   "speaker_id": "SPK-US-SAL-01",
+   "utterance_id": "UTT-US_GENERAL-SALES-001"
+  },
+  {
+   "reference": "Can you send pricing for twenty four licences before Friday.",
+   "slice_id": "us_general/sales",
+   "speaker_id": "SPK-US-SAL-02",
+   "utterance_id": "UTT-US_GENERAL-SALES-002"
+  },
+  {
+   "reference": "We want to upgrade the plan that costs forty two dollars a month.",
+   "slice_id": "us_general/sales",
+   "speaker_id": "SPK-US-SAL-03",
+   "utterance_id": "UTT-US_GENERAL-SALES-003"
+  },
+  {
+   "reference": "The discount code saved us sixty seven dollars on the order.",
+   "slice_id": "us_general/sales",
+   "speaker_id": "SPK-US-SAL-04",
+   "utterance_id": "UTT-US_GENERAL-SALES-004"
+  },
+  {
+   "reference": "Please book a demo for a team of eighty nine people next week.",
+   "slice_id": "us_general/sales",
+   "speaker_id": "SPK-US-SAL-05",
+   "utterance_id": "UTT-US_GENERAL-SALES-005"
+  },
+  {
+   "reference": "I am calling about the renewal quote for one hundred seats.",
+   "slice_id": "us_general/sales",
+   "speaker_id": "SPK-US-SAL-01",
+   "utterance_id": "UTT-US_GENERAL-SALES-006"
+  },
+  {
+   "reference": "Can you send pricing for thirty five licences before Friday.",
+   "slice_id": "us_general/sales",
+   "speaker_id": "SPK-US-SAL-02",
+   "utterance_id": "UTT-US_GENERAL-SALES-007"
+  },
+  {
+   "reference": "We want to upgrade the plan that costs fifty eight dollars a month.",
+   "slice_id": "us_general/sales",
+   "speaker_id": "SPK-US-SAL-03",
+   "utterance_id": "UTT-US_GENERAL-SALES-008"
+  },
+  {
+   "reference": "The discount code saved us twelve dollars on the order.",
+   "slice_id": "us_general/sales",
+   "speaker_id": "SPK-US-SAL-04",
+   "utterance_id": "UTT-US_GENERAL-SALES-009"
+  },
+  {
+   "reference": "Please book a demo for a team of twenty four people next week.",
+   "slice_id": "us_general/sales",
+   "speaker_id": "SPK-US-SAL-05",
+   "utterance_id": "UTT-US_GENERAL-SALES-010"
+  },
+  {
+   "reference": "I am calling about the renewal quote for forty two seats.",
+   "slice_id": "us_general/sales",
+   "speaker_id": "SPK-US-SAL-01",
+   "utterance_id": "UTT-US_GENERAL-SALES-011"
+  },
+  {
+   "reference": "Can you send pricing for sixty seven licences before Friday.",
+   "slice_id": "us_general/sales",
+   "speaker_id": "SPK-US-SAL-02",
+   "utterance_id": "UTT-US_GENERAL-SALES-012"
+  },
+  {
+   "reference": "We want to upgrade the plan that costs eighty nine dollars a month.",
+   "slice_id": "us_general/sales",
+   "speaker_id": "SPK-US-SAL-03",
+   "utterance_id": "UTT-US_GENERAL-SALES-013"
+  },
+  {
+   "reference": "The discount code saved us one hundred dollars on the order.",
+   "slice_id": "us_general/sales",
+   "speaker_id": "SPK-US-SAL-04",
+   "utterance_id": "UTT-US_GENERAL-SALES-014"
+  },
+  {
+   "reference": "Please book a demo for a team of thirty five people next week.",
+   "slice_id": "us_general/sales",
+   "speaker_id": "SPK-US-SAL-05",
+   "utterance_id": "UTT-US_GENERAL-SALES-015"
+  },
+  {
+   "reference": "I am calling about the renewal quote for fifty eight seats.",
+   "slice_id": "us_general/sales",
+   "speaker_id": "SPK-US-SAL-01",
+   "utterance_id": "UTT-US_GENERAL-SALES-016"
+  },
+  {
+   "reference": "Can you send pricing for twelve licences before Friday.",
+   "slice_id": "us_general/sales",
+   "speaker_id": "SPK-US-SAL-02",
+   "utterance_id": "UTT-US_GENERAL-SALES-017"
+  },
+  {
+   "reference": "We want to upgrade the plan that costs twenty four dollars a month.",
+   "slice_id": "us_general/sales",
+   "speaker_id": "SPK-US-SAL-03",
+   "utterance_id": "UTT-US_GENERAL-SALES-018"
+  },
+  {
+   "reference": "The discount code saved us forty two dollars on the order.",
+   "slice_id": "us_general/sales",
+   "speaker_id": "SPK-US-SAL-04",
+   "utterance_id": "UTT-US_GENERAL-SALES-019"
+  },
+  {
+   "reference": "Please book a demo for a team of sixty seven people next week.",
+   "slice_id": "us_general/sales",
+   "speaker_id": "SPK-US-SAL-05",
+   "utterance_id": "UTT-US_GENERAL-SALES-020"
+  },
+  {
+   "reference": "My order number is twelve and the delivery never arrived.",
+   "slice_id": "british/support",
+   "speaker_id": "SPK-GB-SUP-01",
+   "utterance_id": "UTT-BRITISH-SUPPORT-001"
+  },
+  {
+   "reference": "I need help resetting the password for account twenty four.",
+   "slice_id": "british/support",
+   "speaker_id": "SPK-GB-SUP-02",
+   "utterance_id": "UTT-BRITISH-SUPPORT-002"
+  },
+  {
+   "reference": "The invoice for forty two dollars was charged twice this month.",
+   "slice_id": "british/support",
+   "speaker_id": "SPK-GB-SUP-03",
+   "utterance_id": "UTT-BRITISH-SUPPORT-003"
+  },
+  {
+   "reference": "Please cancel ticket number sixty seven and refund the fee.",
+   "slice_id": "british/support",
+   "speaker_id": "SPK-GB-SUP-04",
+   "utterance_id": "UTT-BRITISH-SUPPORT-004"
+  },
+  {
+   "reference": "Our office line has been down for eighty nine hours today.",
+   "slice_id": "british/support",
+   "speaker_id": "SPK-GB-SUP-05",
+   "utterance_id": "UTT-BRITISH-SUPPORT-005"
+  },
+  {
+   "reference": "My order number is one hundred and the delivery never arrived.",
+   "slice_id": "british/support",
+   "speaker_id": "SPK-GB-SUP-01",
+   "utterance_id": "UTT-BRITISH-SUPPORT-006"
+  },
+  {
+   "reference": "I need help resetting the password for account thirty five.",
+   "slice_id": "british/support",
+   "speaker_id": "SPK-GB-SUP-02",
+   "utterance_id": "UTT-BRITISH-SUPPORT-007"
+  },
+  {
+   "reference": "The invoice for fifty eight dollars was charged twice this month.",
+   "slice_id": "british/support",
+   "speaker_id": "SPK-GB-SUP-03",
+   "utterance_id": "UTT-BRITISH-SUPPORT-008"
+  },
+  {
+   "reference": "Please cancel ticket number twelve and refund the fee.",
+   "slice_id": "british/support",
+   "speaker_id": "SPK-GB-SUP-04",
+   "utterance_id": "UTT-BRITISH-SUPPORT-009"
+  },
+  {
+   "reference": "Our office line has been down for twenty four hours today.",
+   "slice_id": "british/support",
+   "speaker_id": "SPK-GB-SUP-05",
+   "utterance_id": "UTT-BRITISH-SUPPORT-010"
+  },
+  {
+   "reference": "My order number is forty two and the delivery never arrived.",
+   "slice_id": "british/support",
+   "speaker_id": "SPK-GB-SUP-01",
+   "utterance_id": "UTT-BRITISH-SUPPORT-011"
+  },
+  {
+   "reference": "I need help resetting the password for account sixty seven.",
+   "slice_id": "british/support",
+   "speaker_id": "SPK-GB-SUP-02",
+   "utterance_id": "UTT-BRITISH-SUPPORT-012"
+  },
+  {
+   "reference": "The invoice for eighty nine dollars was charged twice this month.",
+   "slice_id": "british/support",
+   "speaker_id": "SPK-GB-SUP-03",
+   "utterance_id": "UTT-BRITISH-SUPPORT-013"
+  },
+  {
+   "reference": "Please cancel ticket number one hundred and refund the fee.",
+   "slice_id": "british/support",
+   "speaker_id": "SPK-GB-SUP-04",
+   "utterance_id": "UTT-BRITISH-SUPPORT-014"
+  },
+  {
+   "reference": "Our office line has been down for thirty five hours today.",
+   "slice_id": "british/support",
+   "speaker_id": "SPK-GB-SUP-05",
+   "utterance_id": "UTT-BRITISH-SUPPORT-015"
+  },
+  {
+   "reference": "My order number is fifty eight and the delivery never arrived.",
+   "slice_id": "british/support",
+   "speaker_id": "SPK-GB-SUP-01",
+   "utterance_id": "UTT-BRITISH-SUPPORT-016"
+  },
+  {
+   "reference": "I need help resetting the password for account twelve.",
+   "slice_id": "british/support",
+   "speaker_id": "SPK-GB-SUP-02",
+   "utterance_id": "UTT-BRITISH-SUPPORT-017"
+  },
+  {
+   "reference": "The invoice for twenty four dollars was charged twice this month.",
+   "slice_id": "british/support",
+   "speaker_id": "SPK-GB-SUP-03",
+   "utterance_id": "UTT-BRITISH-SUPPORT-018"
+  },
+  {
+   "reference": "Please cancel ticket number forty two and refund the fee.",
+   "slice_id": "british/support",
+   "speaker_id": "SPK-GB-SUP-04",
+   "utterance_id": "UTT-BRITISH-SUPPORT-019"
+  },
+  {
+   "reference": "Our office line has been down for sixty seven hours today.",
+   "slice_id": "british/support",
+   "speaker_id": "SPK-GB-SUP-05",
+   "utterance_id": "UTT-BRITISH-SUPPORT-020"
+  },
+  {
+   "reference": "I am calling about the renewal quote for twelve seats.",
+   "slice_id": "british/sales",
+   "speaker_id": "SPK-GB-SAL-01",
+   "utterance_id": "UTT-BRITISH-SALES-001"
+  },
+  {
+   "reference": "Can you send pricing for twenty four licences before Friday.",
+   "slice_id": "british/sales",
+   "speaker_id": "SPK-GB-SAL-02",
+   "utterance_id": "UTT-BRITISH-SALES-002"
+  },
+  {
+   "reference": "We want to upgrade the plan that costs forty two dollars a month.",
+   "slice_id": "british/sales",
+   "speaker_id": "SPK-GB-SAL-03",
+   "utterance_id": "UTT-BRITISH-SALES-003"
+  },
+  {
+   "reference": "The discount code saved us sixty seven dollars on the order.",
+   "slice_id": "british/sales",
+   "speaker_id": "SPK-GB-SAL-04",
+   "utterance_id": "UTT-BRITISH-SALES-004"
+  },
+  {
+   "reference": "Please book a demo for a team of eighty nine people next week.",
+   "slice_id": "british/sales",
+   "speaker_id": "SPK-GB-SAL-05",
+   "utterance_id": "UTT-BRITISH-SALES-005"
+  },
+  {
+   "reference": "I am calling about the renewal quote for one hundred seats.",
+   "slice_id": "british/sales",
+   "speaker_id": "SPK-GB-SAL-01",
+   "utterance_id": "UTT-BRITISH-SALES-006"
+  },
+  {
+   "reference": "Can you send pricing for thirty five licences before Friday.",
+   "slice_id": "british/sales",
+   "speaker_id": "SPK-GB-SAL-02",
+   "utterance_id": "UTT-BRITISH-SALES-007"
+  },
+  {
+   "reference": "We want to upgrade the plan that costs fifty eight dollars a month.",
+   "slice_id": "british/sales",
+   "speaker_id": "SPK-GB-SAL-03",
+   "utterance_id": "UTT-BRITISH-SALES-008"
+  },
+  {
+   "reference": "The discount code saved us twelve dollars on the order.",
+   "slice_id": "british/sales",
+   "speaker_id": "SPK-GB-SAL-04",
+   "utterance_id": "UTT-BRITISH-SALES-009"
+  },
+  {
+   "reference": "Please book a demo for a team of twenty four people next week.",
+   "slice_id": "british/sales",
+   "speaker_id": "SPK-GB-SAL-05",
+   "utterance_id": "UTT-BRITISH-SALES-010"
+  },
+  {
+   "reference": "I am calling about the renewal quote for forty two seats.",
+   "slice_id": "british/sales",
+   "speaker_id": "SPK-GB-SAL-01",
+   "utterance_id": "UTT-BRITISH-SALES-011"
+  },
+  {
+   "reference": "Can you send pricing for sixty seven licences before Friday.",
+   "slice_id": "british/sales",
+   "speaker_id": "SPK-GB-SAL-02",
+   "utterance_id": "UTT-BRITISH-SALES-012"
+  },
+  {
+   "reference": "We want to upgrade the plan that costs eighty nine dollars a month.",
+   "slice_id": "british/sales",
+   "speaker_id": "SPK-GB-SAL-03",
+   "utterance_id": "UTT-BRITISH-SALES-013"
+  },
+  {
+   "reference": "The discount code saved us one hundred dollars on the order.",
+   "slice_id": "british/sales",
+   "speaker_id": "SPK-GB-SAL-04",
+   "utterance_id": "UTT-BRITISH-SALES-014"
+  },
+  {
+   "reference": "Please book a demo for a team of thirty five people next week.",
+   "slice_id": "british/sales",
+   "speaker_id": "SPK-GB-SAL-05",
+   "utterance_id": "UTT-BRITISH-SALES-015"
+  },
+  {
+   "reference": "I am calling about the renewal quote for fifty eight seats.",
+   "slice_id": "british/sales",
+   "speaker_id": "SPK-GB-SAL-01",
+   "utterance_id": "UTT-BRITISH-SALES-016"
+  },
+  {
+   "reference": "Can you send pricing for twelve licences before Friday.",
+   "slice_id": "british/sales",
+   "speaker_id": "SPK-GB-SAL-02",
+   "utterance_id": "UTT-BRITISH-SALES-017"
+  },
+  {
+   "reference": "We want to upgrade the plan that costs twenty four dollars a month.",
+   "slice_id": "british/sales",
+   "speaker_id": "SPK-GB-SAL-03",
+   "utterance_id": "UTT-BRITISH-SALES-018"
+  },
+  {
+   "reference": "The discount code saved us forty two dollars on the order.",
+   "slice_id": "british/sales",
+   "speaker_id": "SPK-GB-SAL-04",
+   "utterance_id": "UTT-BRITISH-SALES-019"
+  },
+  {
+   "reference": "Please book a demo for a team of sixty seven people next week.",
+   "slice_id": "british/sales",
+   "speaker_id": "SPK-GB-SAL-05",
+   "utterance_id": "UTT-BRITISH-SALES-020"
+  },
+  {
+   "reference": "My order number is twelve and the delivery never arrived.",
+   "slice_id": "indian/support",
+   "speaker_id": "SPK-IN-SUP-01",
+   "utterance_id": "UTT-INDIAN-SUPPORT-001"
+  },
+  {
+   "reference": "I need help resetting the password for account twenty four.",
+   "slice_id": "indian/support",
+   "speaker_id": "SPK-IN-SUP-02",
+   "utterance_id": "UTT-INDIAN-SUPPORT-002"
+  },
+  {
+   "reference": "The invoice for forty two dollars was charged twice this month.",
+   "slice_id": "indian/support",
+   "speaker_id": "SPK-IN-SUP-03",
+   "utterance_id": "UTT-INDIAN-SUPPORT-003"
+  },
+  {
+   "reference": "Please cancel ticket number sixty seven and refund the fee.",
+   "slice_id": "indian/support",
+   "speaker_id": "SPK-IN-SUP-04",
+   "utterance_id": "UTT-INDIAN-SUPPORT-004"
+  },
+  {
+   "reference": "Our office line has been down for eighty nine hours today.",
+   "slice_id": "indian/support",
+   "speaker_id": "SPK-IN-SUP-05",
+   "utterance_id": "UTT-INDIAN-SUPPORT-005"
+  },
+  {
+   "reference": "My order number is one hundred and the delivery never arrived.",
+   "slice_id": "indian/support",
+   "speaker_id": "SPK-IN-SUP-01",
+   "utterance_id": "UTT-INDIAN-SUPPORT-006"
+  },
+  {
+   "reference": "I need help resetting the password for account thirty five.",
+   "slice_id": "indian/support",
+   "speaker_id": "SPK-IN-SUP-02",
+   "utterance_id": "UTT-INDIAN-SUPPORT-007"
+  },
+  {
+   "reference": "The invoice for fifty eight dollars was charged twice this month.",
+   "slice_id": "indian/support",
+   "speaker_id": "SPK-IN-SUP-03",
+   "utterance_id": "UTT-INDIAN-SUPPORT-008"
+  },
+  {
+   "reference": "Please cancel ticket number twelve and refund the fee.",
+   "slice_id": "indian/support",
+   "speaker_id": "SPK-IN-SUP-04",
+   "utterance_id": "UTT-INDIAN-SUPPORT-009"
+  },
+  {
+   "reference": "Our office line has been down for twenty four hours today.",
+   "slice_id": "indian/support",
+   "speaker_id": "SPK-IN-SUP-05",
+   "utterance_id": "UTT-INDIAN-SUPPORT-010"
+  },
+  {
+   "reference": "My order number is forty two and the delivery never arrived.",
+   "slice_id": "indian/support",
+   "speaker_id": "SPK-IN-SUP-01",
+   "utterance_id": "UTT-INDIAN-SUPPORT-011"
+  },
+  {
+   "reference": "I need help resetting the password for account sixty seven.",
+   "slice_id": "indian/support",
+   "speaker_id": "SPK-IN-SUP-02",
+   "utterance_id": "UTT-INDIAN-SUPPORT-012"
+  },
+  {
+   "reference": "The invoice for eighty nine dollars was charged twice this month.",
+   "slice_id": "indian/support",
+   "speaker_id": "SPK-IN-SUP-03",
+   "utterance_id": "UTT-INDIAN-SUPPORT-013"
+  },
+  {
+   "reference": "Please cancel ticket number one hundred and refund the fee.",
+   "slice_id": "indian/support",
+   "speaker_id": "SPK-IN-SUP-04",
+   "utterance_id": "UTT-INDIAN-SUPPORT-014"
+  },
+  {
+   "reference": "Our office line has been down for thirty five hours today.",
+   "slice_id": "indian/support",
+   "speaker_id": "SPK-IN-SUP-05",
+   "utterance_id": "UTT-INDIAN-SUPPORT-015"
+  },
+  {
+   "reference": "My order number is fifty eight and the delivery never arrived.",
+   "slice_id": "indian/support",
+   "speaker_id": "SPK-IN-SUP-01",
+   "utterance_id": "UTT-INDIAN-SUPPORT-016"
+  },
+  {
+   "reference": "I need help resetting the password for account twelve.",
+   "slice_id": "indian/support",
+   "speaker_id": "SPK-IN-SUP-02",
+   "utterance_id": "UTT-INDIAN-SUPPORT-017"
+  },
+  {
+   "reference": "The invoice for twenty four dollars was charged twice this month.",
+   "slice_id": "indian/support",
+   "speaker_id": "SPK-IN-SUP-03",
+   "utterance_id": "UTT-INDIAN-SUPPORT-018"
+  },
+  {
+   "reference": "Please cancel ticket number forty two and refund the fee.",
+   "slice_id": "indian/support",
+   "speaker_id": "SPK-IN-SUP-04",
+   "utterance_id": "UTT-INDIAN-SUPPORT-019"
+  },
+  {
+   "reference": "Our office line has been down for sixty seven hours today.",
+   "slice_id": "indian/support",
+   "speaker_id": "SPK-IN-SUP-05",
+   "utterance_id": "UTT-INDIAN-SUPPORT-020"
+  },
+  {
+   "reference": "I am calling about the renewal quote for twelve seats.",
+   "slice_id": "indian/sales",
+   "speaker_id": "SPK-IN-SAL-01",
+   "utterance_id": "UTT-INDIAN-SALES-001"
+  },
+  {
+   "reference": "Can you send pricing for twenty four licences before Friday.",
+   "slice_id": "indian/sales",
+   "speaker_id": "SPK-IN-SAL-02",
+   "utterance_id": "UTT-INDIAN-SALES-002"
+  },
+  {
+   "reference": "We want to upgrade the plan that costs forty two dollars a month.",
+   "slice_id": "indian/sales",
+   "speaker_id": "SPK-IN-SAL-03",
+   "utterance_id": "UTT-INDIAN-SALES-003"
+  },
+  {
+   "reference": "The discount code saved us sixty seven dollars on the order.",
+   "slice_id": "indian/sales",
+   "speaker_id": "SPK-IN-SAL-04",
+   "utterance_id": "UTT-INDIAN-SALES-004"
+  },
+  {
+   "reference": "Please book a demo for a team of eighty nine people next week.",
+   "slice_id": "indian/sales",
+   "speaker_id": "SPK-IN-SAL-05",
+   "utterance_id": "UTT-INDIAN-SALES-005"
+  },
+  {
+   "reference": "I am calling about the renewal quote for one hundred seats.",
+   "slice_id": "indian/sales",
+   "speaker_id": "SPK-IN-SAL-01",
+   "utterance_id": "UTT-INDIAN-SALES-006"
+  },
+  {
+   "reference": "Can you send pricing for thirty five licences before Friday.",
+   "slice_id": "indian/sales",
+   "speaker_id": "SPK-IN-SAL-02",
+   "utterance_id": "UTT-INDIAN-SALES-007"
+  },
+  {
+   "reference": "We want to upgrade the plan that costs fifty eight dollars a month.",
+   "slice_id": "indian/sales",
+   "speaker_id": "SPK-IN-SAL-03",
+   "utterance_id": "UTT-INDIAN-SALES-008"
+  },
+  {
+   "reference": "The discount code saved us twelve dollars on the order.",
+   "slice_id": "indian/sales",
+   "speaker_id": "SPK-IN-SAL-04",
+   "utterance_id": "UTT-INDIAN-SALES-009"
+  },
+  {
+   "reference": "Please book a demo for a team of twenty four people next week.",
+   "slice_id": "indian/sales",
+   "speaker_id": "SPK-IN-SAL-05",
+   "utterance_id": "UTT-INDIAN-SALES-010"
+  },
+  {
+   "reference": "I am calling about the renewal quote for forty two seats.",
+   "slice_id": "indian/sales",
+   "speaker_id": "SPK-IN-SAL-01",
+   "utterance_id": "UTT-INDIAN-SALES-011"
+  },
+  {
+   "reference": "Can you send pricing for sixty seven licences before Friday.",
+   "slice_id": "indian/sales",
+   "speaker_id": "SPK-IN-SAL-02",
+   "utterance_id": "UTT-INDIAN-SALES-012"
+  },
+  {
+   "reference": "We want to upgrade the plan that costs eighty nine dollars a month.",
+   "slice_id": "indian/sales",
+   "speaker_id": "SPK-IN-SAL-03",
+   "utterance_id": "UTT-INDIAN-SALES-013"
+  },
+  {
+   "reference": "The discount code saved us one hundred dollars on the order.",
+   "slice_id": "indian/sales",
+   "speaker_id": "SPK-IN-SAL-04",
+   "utterance_id": "UTT-INDIAN-SALES-014"
+  },
+  {
+   "reference": "Please book a demo for a team of thirty five people next week.",
+   "slice_id": "indian/sales",
+   "speaker_id": "SPK-IN-SAL-05",
+   "utterance_id": "UTT-INDIAN-SALES-015"
+  },
+  {
+   "reference": "I am calling about the renewal quote for fifty eight seats.",
+   "slice_id": "indian/sales",
+   "speaker_id": "SPK-IN-SAL-01",
+   "utterance_id": "UTT-INDIAN-SALES-016"
+  },
+  {
+   "reference": "Can you send pricing for twelve licences before Friday.",
+   "slice_id": "indian/sales",
+   "speaker_id": "SPK-IN-SAL-02",
+   "utterance_id": "UTT-INDIAN-SALES-017"
+  },
+  {
+   "reference": "We want to upgrade the plan that costs twenty four dollars a month.",
+   "slice_id": "indian/sales",
+   "speaker_id": "SPK-IN-SAL-03",
+   "utterance_id": "UTT-INDIAN-SALES-018"
+  },
+  {
+   "reference": "The discount code saved us forty two dollars on the order.",
+   "slice_id": "indian/sales",
+   "speaker_id": "SPK-IN-SAL-04",
+   "utterance_id": "UTT-INDIAN-SALES-019"
+  },
+  {
+   "reference": "Please book a demo for a team of sixty seven people next week.",
+   "slice_id": "indian/sales",
+   "speaker_id": "SPK-IN-SAL-05",
+   "utterance_id": "UTT-INDIAN-SALES-020"
+  }
+ ]
+}
